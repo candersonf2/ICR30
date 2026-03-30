@@ -135,7 +135,10 @@ namespace ICR30
             {
                 mtscb_COMPort.Items.Add(port);
             }
-            mtscb_COMPort.SelectedIndex = 0;
+            if (mtscb_COMPort.Items.Count > 0)
+            {
+                mtscb_COMPort.SelectedIndex = 0;
+            }
         }
         public void GUI_PopulateBaudRates()
         {
